@@ -1,113 +1,90 @@
-📌 Project Overview
+# 📘 Assignment Workflow Portal – Frontend
 
-This repository contains the frontend of the Assignment Workflow Portal, built using React.js.
+A role-based assignment management frontend built with **React.js**, designed for teachers and students to manage assignments through a clean, secure, and responsive interface.
 
-The frontend provides:
+---
 
-A single login screen for both roles
+## 🚀 Project Overview
 
-Role-based dashboards (Teacher / Student)
+This repository contains the frontend of the Assignment Workflow Portal.  
+It supports a **single login system** with **automatic role-based dashboards**, ensuring a smooth and structured academic workflow.
 
-Assignment creation, listing, filtering, and submission
+---
 
-Clean, responsive UI with proper error handling
+## ✨ Features
 
-🛠️ Tech Stack
+- Single login for Teachers and Students  
+- JWT-based authentication  
+- Role-based redirection after login  
 
-React.js
+Teacher Dashboard  
+- Create, edit, publish, and complete assignments  
+- Assignment states: Draft, Published, Completed  
+- View student submissions per assignment  
 
-React Router
+Student Dashboard  
+- View only published assignments  
+- Submit one response per assignment  
+- View submitted answers (read-only)  
 
-Context API (State Management)
+- Clean, responsive UI  
+- Form validation and error handling  
 
-Axios (API calls)
+---
 
-Tailwind CSS
+## 🛠 Tech Stack
 
-JWT-based authentication
+- React.js  
+- React Router  
+- Context API  
+- Axios  
+- Tailwind CSS  
+- JWT Authentication  
 
-⚙️ Setup & Run Locally
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/assignment-workflow-portal-frontend.git
+---
+
+## ⚙️ Setup, Configuration & Application Flow
+
+```bash
+git clone [https://github.com/vishalsharma059/assignment-workflow-portal-FE.git]
 cd assignment-workflow-portal-frontend
-
-2️⃣ Install Dependencies
 npm install
 
-3️⃣ Environment Configuration
-
-Create a .env file:
-
+# create .env file in root directory
 VITE_API_BASE_URL=http://localhost:8800/api
 
-
-Ensure backend is running before starting frontend.
-
-4️⃣ Start the Application
+# make sure backend server is running
 npm run dev
 
-
-The application will run on:
-
+# application runs on
 http://localhost:3000
 
-🎯 Application Flow
-Login
+```
 
-Single login page for both teachers and students
+## 🔄 Application Flow
 
-Backend returns JWT token + role
+- User logs in using a single login page  
+- Backend returns JWT token and user role  
+- Automatic redirection based on role:
+  - Teacher → Teacher Dashboard  
+  - Student → Student Dashboard  
 
-Automatic redirection:
+---
 
-Teacher → Teacher Dashboard
+## 🧠 Notes
 
-Student → Student Dashboard
+- JWT is stored using Context API / localStorage  
+- UI is strictly role-aware and hides unauthorized actions  
+- Students cannot access draft or completed assignments  
+- Completed assignments are locked for editing  
 
-Teacher Dashboard
+---
 
-Create and manage assignments
+## 🙋‍♂️ Author
 
-Assignment states:
+**Vishal Sharma**  
+Full Stack MERN Developer  
 
-Draft (editable, deletable)
+🔗 LinkedIn: https://www.linkedin.com/in/vishalsharma2003  
 
-Published (visible to students)
-
-Completed (locked)
-
-View all student submissions per assignment
-
-Student Dashboard
-
-View only Published assignments
-
-Submit one answer per assignment
-
-View submitted answer (read-only)
-
-🧠 Assumptions & Notes
-
-JWT token is stored securely (localStorage/context).
-
-UI is role-aware and hides unauthorized actions.
-
-Students cannot see draft or completed assignments.
-
-Teachers cannot modify completed assignments.
-
-🎨 UI & UX Notes
-
-Responsive layout for desktop and tablet
-
-Clear validation and error messages
-
-Simple, clean dashboard-focused design
-
-📌 Additional Notes
-
-Designed to match real-world role-based systems
-
-Emphasis on workflow, security, and usability
-
-Easily extendable for analytics, pagination, and notifications
+⭐ If this project helps you, please consider giving it a star!
